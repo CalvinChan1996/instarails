@@ -15,8 +15,9 @@
   <tbody>
     <% @photos.each do |photo| %>
       <tr>
-        <td><%= photo.image_data %></td>
-        <td><%= photo.user %></td>
+        <td><%=image_tag photo.image.url %></td>
+        <td><%= photo.user.email %></td>
+
         <td><%= photo.description %></td>
         <td><%= link_to 'Show', photo %></td>
         <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
